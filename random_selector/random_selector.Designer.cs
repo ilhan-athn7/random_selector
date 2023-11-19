@@ -31,6 +31,7 @@
             groupBox1 = new GroupBox();
             listBox1 = new ListBox();
             groupBox2 = new GroupBox();
+            lbl_Github = new LinkLabel();
             listBox2 = new ListBox();
             btn_RndChoose = new Button();
             lbl_Choosen = new Label();
@@ -64,6 +65,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(lbl_Github);
             groupBox2.Controls.Add(listBox2);
             groupBox2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.Location = new Point(596, 12);
@@ -72,6 +74,19 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Seçilen Öğrenciler";
+            // 
+            // lbl_Github
+            // 
+            lbl_Github.AutoSize = true;
+            lbl_Github.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Github.Location = new Point(244, -3);
+            lbl_Github.Name = "lbl_Github";
+            lbl_Github.Size = new Size(156, 13);
+            lbl_Github.TabIndex = 9;
+            lbl_Github.TabStop = true;
+            lbl_Github.Text = "ilhan-athn7/random_selector";
+            lbl_Github.Links.Add(0, 0, "https://github.com/ilhan-athn7/random_selector");
+            lbl_Github.LinkClicked += new LinkLabelLinkClickedEventHandler(LinkedLabelClicked);
             // 
             // listBox2
             // 
@@ -168,6 +183,7 @@
             Load += random_selector_Load;
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +200,6 @@
         private Button btn_Add;
         private Button btn_Exclude;
         private Button button1;
+        private LinkLabel lbl_Github;
     }
 }

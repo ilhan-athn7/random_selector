@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Security.Policy;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
@@ -145,6 +147,12 @@ namespace random_selector
                     listBox2.Items.Clear();
                 }
             }
+        }
+
+        private void LinkedLabelClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lbl_Github.LinkVisited = true;
+            Process.Start(new ProcessStartInfo("explorer.exe", "https://github.com/ilhan-athn7/random_selector"));
         }
     }
 }
