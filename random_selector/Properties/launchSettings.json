@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "random_selector": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
